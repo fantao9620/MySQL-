@@ -1,0 +1,14 @@
+创建数据库 
+在MySQL命令行工具中可以直接输入和执行SQL语句。可
+以使用CREATE DATABASE语句创建数据库，它的基本语法
+结构如下：
+CREATE DATABASE [IF NOT EXISTS] 数据库名
+• 如果使用IF NOT EXISTS关键字，则当指定的数据库名存
+在时，不创建数据库。如果不使用IF NOT EXISTS关键字，
+当创建的数据库名存在时，将产生错误。
+• 要创建数据库MySQLDB，可以使用下面的语句。
+CREATE DATABASE IF NOT EXISTS MySQLDB;
+使用MySQL命令，显示创建的数据库
+show create database mysqldb;
+可以查看mysqldb数据库的相关信息（例如MySQL版本ID号、
+默认字符集等信息
