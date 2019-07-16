@@ -12,3 +12,46 @@ CREATE DATABASE IF NOT EXISTS MySQLDB;
 show create database mysqldb;
 可以查看mysqldb数据库的相关信息（例如MySQL版本ID号、
 默认字符集等信息
+1.创建数据库 create database 名字
+2.删除数据库 drop database 名字
+3.E-R模型:实体-关系
+关系型数据库存储的数据是以表的形式存储,表中的一行就是记录,列是属性或字段
+4.约束:主键,外键,唯一,非空,检查
+5.数据类型:int\char\varchar\date\datetime\text
+6.建表:create table 表名(列名1 类型 约束,列名2 类型 约束,列名3 类型 约束)存储类型以及字符集
+7.删除表:drop table 表名
+8.清空表 truncate table 表名
+9.复制表结构:create table 新表名 like 旧表名
+10.复制表结构+create table 新表名 select * from 旧表名
+11.修改表:ALTER TABLE 表名 ADD 列名 数据类型和长度 列属性
+• ALTER TABLE 表名 MODIFY 列名 新数据类型和长度 新列
+属性
+• ALTER TABLE 表名 DROP COLUMN 列名
+使用ALTER TABLE语句向表中添加列的基本语法如下：
+ALTER TABLE 表名 ADD 列名 数据类型和长度 列属性
+使用ALTER TABLE语句修改列属性的基本语法如下：
+ALTER TABLE 表名 MODIFY 列名 新数据类型和长度 新列属
+性
+使用ALTER TABLE语句删除列的基本语法如下：
+ALTER TABLE 表名 DROP COLUMN 列名
+修改约束条件
+添加约束条
+• 向表的某个字段添加约束条件的语法格式如下（其中约束类型可以
+是唯一性约束、主键约束及外键约束）。
+alter table 表名 add constraint 约束名 约束类型 (字段名)
+alter table person add constraint name_unique unique (name);
+删除约束条件
+• 删除表的主键约束条件语法格式比较简单，语法格式如下。
+alter table 表名 drop primary key
+• 删除表的外键约束时，需指定外键约束名称，语法格式如下
+（注意需指定外键约束名）。
+alter table 表名 drop foreign key 约束名
+• 删除表字段的唯一性约束，实际上只需删除该字段的唯一性索
+引即可，语法格式如下（注意需指定唯一性索引的索引名）。
+alter table 表名 drop index 索引名;
+alter table 表名 engine=新的存储引擎类型
+• alter table 表名 default charset=新的字符集
+• alter table 表名 auto_increment=新的初始值
+• alter table 表名 pack_keys=新的压缩类型
+修改表名的语法格式较为简单，语法格式如下。
+rename table旧表名to新表名
