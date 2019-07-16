@@ -155,3 +155,7 @@ character_set_client：客户端（MySQL命令窗口）的字符集
 • character_set_system：元数据(字段名、表名、数据库名等)字
 符集，默认的字符集为utf8
 
+1.专业词db,dbms,dbs
+2.数据库类型:网状,层次,关系(表)
+3.关系型数据库:mysql\oracle\sqlserver\db2
+4.mysql特色;存储引擎,innoDB(增删改-安全性)\myisam(查-性能)
