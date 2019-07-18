@@ -1,0 +1,29 @@
+1.数学函数
+ceil()\floor()\round()\random()\truncate()
+2.字符串函数
+length(),substring(),upper(),lower(),concat(),left(),position(),lpad()
+3.日期和时间函数
+now(),currrent_timestamp(),
+计算时间差timestampdiff(单位,小日期,大日期)
+TIMESTAMPDIFF(SECOND,'2019-07-24 11:24:21','2019-09-30 17:21:32') AS DIFF_SECOND3, -- 秒
+TIMESTAMPDIFF(MINUTE,'2019-07-24 11:24:21','2019-09-30 17:21:32') AS DIFF_MINUTE, -- 分
+TIMESTAMPDIFF(HOUR,'2019-07-24 11:24:21','2019-09-30 17:21:32') AS DIFF_HOUR, -- 小时
+TIMESTAMPDIFF(DAY ,'2019-07-24 11:24:21','2019-09-30 17:21:32') AS DIFF_DATE1, -- 天
+DATEDIFF('2019-09-30 17:21:32','2019-07-24 11:24:21') AS DIFF_DATE2, -- 天
+TIMESTAMPDIFF(MONTH,'2019-07-24 11:24:21','2019-09-30 17:21:32') AS DIFF_MONTH, -- 月
+TIMESTAMPDIFF(YEAR,'2019-07-24 11:24:21','2021-08-21 17:24:31') AS DIFF_YEAR -- 年
+添加时间按什么单位 adddate(原始日期,interval 数值 单位)
+取具体单位时间 时间单位(),例如 year(),extract(type from 原始日期)
+4.流程控制函数
+case-when2种情况:
+第一种匹配值的情况:
+case 值匹配when 匹配的值1 then 数据1 when 匹配的值2 then 数据2
+else 数据 end from 表名
+第二种匹配条件的情况:
+case when 条件 then 数据1else 数据 end from 表名
+二选一:if(epx1,exp2,exp3)
+exp1是true,取值exp2,否则exp3
+ifnull(exp1,exp2) 如果exp1值是空,就取值exp2,否则取值exp1
+5.其他函数
+md5()加密
+format()格式化数字或者字符串
