@@ -1,0 +1,25 @@
+1.结构化查询语言(sql)的作用
+分类:
+dml:insert,update,delete
+dql:select
+ddl:create,alter,drop,truncate
+dcl:grant,revoke
+tpl:commit,rollback
+2.基本select语句的作用
+select 列
+from 表
+where 条件
+3.空值null
+查询结果又空值参与计算的结果是null
+条件是空(not)is null
+修改set设置空值 列=null
+4.列别名:列[as]别名
+5.消除重复行的关键字distinct
+distinct 列
+6.闲置数据的作用及where子句的语法
+where限制行数,select后面的列是限制列
+7.按列名,列别名,顺序号排序及升序
+order by 列名 默认升序  desc 降序
+8.限制记录行数
+limit n 选取前n行数字
+limit n,m  从行索引n开始选取m行
